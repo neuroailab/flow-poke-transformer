@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="FPT enables fast prediction of multimodal motion distributions in open settings">
+  <meta property="og:title" content="What If: Understanding Motion Through Sparse Interactions" />
+  <meta property="og:description"
+    content="FPT enables fast prediction of multimodal motion distributions in open settings" />
+  <meta property="og:url" content="" />
+
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/teaser_fig.png" />
+  <meta property="og:image:width" content="2700" />
+  <meta property="og:image:height" content="1324" />
+
+
+  <meta name="twitter:title" content="What If: Understanding Motion Through Sparse Interactions">
+  <meta name="twitter:description"
+    content="FPT enables fast prediction of multimodal motion distributions in open settings">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser_fig.png">
+  <meta name="twitter:card" content="FPT enables fast prediction of multimodal motion distributions in open settings">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Motion Understanding, Generative Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%221em%22 font-size=%2232%22>🧹</text></svg>">
+  <title>What If: Understanding Motion Through Sparse Interactions</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/twentytwenty.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/jquery.event.move.js"></script>
+  <script src="static/js/jquery.twentytwenty.js"></script>
+</head>
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <!-- <hr class="navbar-divider"> -->
+          <p class="navbar-item is-size-7 has-text-grey-dark">
+            From the Authors
+          </p>
+          <a class="navbar-item" style="margin-left: 15px;" href="https://compvis.github.io/cleandift/">
+            CleanDIFT
+          </a>
+          <a class="navbar-item" style="margin-left: 15px;" href="https://compvis.github.io/attribute-control/">
+            Attribute Control
+          </a>
+          <a class="navbar-item" style="margin-left: 15px;" href="https://compvis.github.io/LoRAdapter/">
+            CTRLorALTer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"> <i>What If:</i> Understanding Motion Through Sparse Interactions</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://stefan-baumann.eu/" target="_blank">Stefan Andreas Baumann</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://nickstracke.dev/" target="_blank">Nick Stracke</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="" target="_blank">Timy Phan</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ommer-lab.com/people/ommer/" target="_blank">Björn Ommer</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">CompVis @ LMU Munich, MCML &nbsp;&nbsp;&nbsp; *equal contribution</span>
+              <!-- <span class="eql-cntrb"><sup>*</sup>Indicates Equal Contribution</span> -->
+            </div>
+            <div class="is-size-5 publication-venue">
+              <span>ICCV 2025</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!--  PDF link -->
+                <span class="link-block">
+                  <a href="static/what_if.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/CompVis/flow-poke-transformer" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+
+                <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+
+                <!-- HF weights Link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
+                        style="height: 20px;">
+                    </span>
+                    <span>Weights</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <img src="static/images/teaser_fig.png" alt="" style="width: 100%; height: auto;">
+          </div>
+
+        </div>
+
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                <p style="margin-bottom: 20px; margin-top: 10px;">
+                  <span style="font-weight: bold">TL;DR:</span> Our Flow Poke Transformer (FPT) directly models the uncertainty of the world by predicting distributions of how objects (<span style="color:#ff7f0e">×</span>) may move conditioned on some  input movements (pokes, →). We see that whether the hand (below paw) or the paw (above hand) moves downwards directly influences the other's movement. Left: the paw pushing the hand down, will force the hand downwards, resulting in a unimodal distribution. Right: the hand moving down results in two modes, the paw following along or staying put.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p class="has-text-justified" style="font-size: 16px;">
+              Understanding the dynamics of a physical scene involves reasoning about the diverse ways it can potentially change, especially as a result of local interactions. We present the Flow Poke Transformer (FPT), a novel framework for directly predicting the distribution of local motion, conditioned on sparse interactions termed “pokes”. Unlike traditional methods that typically only enable dense sampling of a single realization of scene dynamics, FPT provides an interpretable directly accessible representation of multi-modal scene motion, its dependency on physical interactions and the inherent uncertainties of scene dynamics.</p><p class="has-text-justified" style="font-size: 16px;"> We also evaluate our model on several downstream tasks to enable comparisons with prior methods and highlight the flexibility of our approach. On dense face motion generation, our generic pre-trained model surpasses specialized baselines. FPT can be fine-tuned in strongly out-of-distribution tasks such as synthetic datasets to enable significant improvements over in-domain methods in articulated object motion estimation. Additionally, predicting explicit motion distributions directly enables our method to achieve competitive performance on  tasks like moving part segmentation from pokes which further demonstrates the versatility of our FPT.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">How can objects move and interact in the world?</h2>
+          <div class="content">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/flow_poke_distributions_qualitative-1.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              Our Flow Poke Transformer directly models sparse kinematics for its queries and predicts multimodal motion distributions which are diverse, but also show realistic understanding of physical movement in scenes. Its training objective is to predict Gaussian Mixture Models (GMMs) in a single forward pass by minimizing the NLL of its output distributions. Once the GMMs have been generated, samples can be drawn directly from them with minimal latency.</p><p class="has-text-justified" style="font-size: 16px;"> The primary advantage of modeling sparse motion lies in the reduced computational overhead during both training and inference. Coupled with our query-causal attention pattern (s. the paper for more details) which further reduces computational complexity, this enables us to train a Flow Poke Transformer within 1 day on 8 H200s and sample >100k queries in a second for one image on a single H200.
+            </p>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/mode_analysis.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              Generative modelling of distributions benefits from multi-step approaches like diffusion models which suffer from high latency, but are less prone to issues like mode collapse or mode averaging. Our Flow Poke Transformer is a single-step generative model which predicts diverse modes and tends to be confident in correct modes. We find that the predicted uncertainty correlates strongly with the prediction motion's error when compared to the ground truth.
+            </p>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/calibration.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">High-level Overview</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/architecture.png" alt="" style="width: 100%; height: auto; margin-bottom: 20px;">
+            <p class="has-text-justified" style="font-size: 16px;">
+              Given an image, a set of given pokes (visualized as arrows →), and query positions (<span style="color:#ff7f0e">×</span>), our model directly predicts an explicit distribution of the movement at each query position. The flow poke transformer
+              cross-attends to features from a jointly trained image encoder to incorporate visual information. Crucially, our architecture represents movement at individual points (enabling sparse & off-grid motion processing) and directly predicts continuous, multimodal output distributions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Comparison and Capabilities</h2>
+          <div class="content">
+            <h3 class="title">Face Motion Generation</h3>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/face_motion.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              We show fine-grained zero-shot poking results on faces and compare against InstantDrag, which was trained specifically for this task. We further visualize the predicted motion as warps using InstantDrag's face warping model. The qualitative results show that our model tends to predict more accurate and localized motion.
+            </p>
+            <h3 class="title">Moving Part Segmentation</h3>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/openset_mov_segment.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              We perform moving part segmentation with our method by thresholding the KL divergence between the pointwise unconditional motion distribution and the pointwise motion distribution conditioned on a specific poke. Our method shows strong moving part segmentation performance in generic open-set cases.
+            </p>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/dragapart.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              We directly replicate Fig. 7 from DragAPart [21] with our method. Our method provides spatially continuous predictions and makes fewer critical mistakes like segmenting the furniture body with the drawer (top right). Quantitatively, we find that our method, especially when finetuned in-domain, outperforms DragAPart, which introduced this benchmark.
+            </p>
+            <h3 class="title">Articulated Motion Estimation</h3>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/dragamove.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              We compare on the Drag-A-Move dataset with Motion-I2V, DragAPart, and PuppetMaster. Our (finetuned?) model is qualitatively more capable of capturing complex conditioning with multiple different pokes than DAP and PM in this setup. Motion-I2V often fails to accurately follow the conditioning locally.
+            </p>
+            <h3 class="title">Unconditional Sampling</h3>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <img src="static/images/uncond.png" alt="" style="width: 100%; height: auto;">
+              </div>
+            </div>
+            <p class="has-text-justified" style="font-size: 16px;">
+              By sampling autoregressively without an initial poke, we can sample from the joint distribution of movement of the whole scene. We show such samples of generated flow without prior motion conditioning on pokes. Our model can generate a wide variety of realistic motions.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{baumann2025whatif,
+    title={What If: Understanding Motion Through Sparse Interactions}, 
+    author={Stefan Andreas Baumann and Nick Stracke and Timy Phan and Bj{\"o}rn Ommer},
+    booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year={2025}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          // const target = el.dataset.target;
+          // const $target = document.getElementById(target);
+          menu = el.parentElement.parentElement.children[1]
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+
+        });
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
