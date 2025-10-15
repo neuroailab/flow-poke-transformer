@@ -1,6 +1,6 @@
 # Flow Poke Transformer
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://compvis.github.io/flow-poke-transformer/)
-[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/pdf/2510.todo)
+[![Paper](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/abs/2510.12777)
 [![Weights](https://img.shields.io/badge/HuggingFace-Weights-orange)](https://huggingface.co/CompVis/flow-poke-transformer)
 <h2 align="center"><i>What If:</i> Understanding Motion Through Sparse Interactions</h2>
 <div align="center"> 
